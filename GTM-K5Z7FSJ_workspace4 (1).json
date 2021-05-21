@@ -1,0 +1,1735 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2021-05-21 02:28:42",
+    "containerVersion": {
+        "path": "accounts/4702624129/containers/45177636/versions/0",
+        "accountId": "4702624129",
+        "containerId": "45177636",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/4702624129/containers/45177636",
+            "accountId": "4702624129",
+            "containerId": "45177636",
+            "name": "Data Setup Renewal",
+            "publicId": "GTM-K5Z7FSJ",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1620794615876",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/4702624129/containers/45177636/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "tagId": "21",
+                "name": "Fireup test",
+                "type": "html",
+                "notes": "IMportant",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nconsole.log(\"{{Event}}\")\n  </script>\n    "
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1621561835708",
+                "firingTriggerId": [
+                    "17",
+                    "15",
+                    "19",
+                    "13",
+                    "14",
+                    "16",
+                    "20",
+                    "18"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "tagId": "22",
+                "name": "DL_eec_pv_purchase",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nvar productsArr = [];\n    for (i = 0; i < _NB_LO.length; i++) { //2개 동시 주문 없으면 loop 제거\n      productsArr.push({\n        'name': document.querySelector('input[name=\"ai_pnm[]\"]').value,\n        'id': document.querySelector('input[name=\"ai_pid[]\"]').value,\n        'price': document.querySelector('input[name=\"ai_ppc[]\"]').value,\n\t\t'brand': document.querySelector('input[name=\"ai_ppb[]\"]').value,\t\t\t\n\t\t'category': document.querySelector('input[name=\"ai_pca[]\"]').value,\t\t\n\t\t'variant': document.querySelector('input[name=\"productName\"]').value,\n\t\t'quantity': document.querySelector('input[name=\"ai_pqt[]\"]').value\n\t  })\n    }\nwindow.dataLayer = window.dataLayer || [];\nwindow.dataLayer.push({\n\t'event': 'eec.purchase',\t\t\t\t\n\t'ecommerce': {\t\t\t\t\t\t\t\n\t\t'purchase': {\t\t\t\t\t\t\n\t\t\t'actionField': {\n          'id': document.querySelector('input[name=\"ao_oid\"]').value, \n          'affiliation': document.querySelector('input[name=\"ao_aff\"]').value,\n          'revenue': document.querySelector('input[name=\"ao_rev\"]').value, \n          'tax': document.querySelector('input[name=\"ao_tx\"]').value,\n          'shipping': '0.00',\n          'coupon': document.querySelector('input[name=\"ao_cpn\"]').value\n        },\n        'products': productsArr\n      }\n    }\n  });\n  \n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1621519444160",
+                "firingTriggerId": [
+                    "20"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "tagId": "38",
+                "name": "GA - Pageview - All pages",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useHashAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_PAGEVIEW"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decorateFormsAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{GA ID}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useEcommerceDataLayer",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "doubleClick",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setTrackerName",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "fieldsToSet",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "cookieDomain"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "auto"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "campaignName"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{cjs_nv_campaignName}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "campaignSource"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{cjs_nv_campaignSource}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "campaignMedium"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{cjs_nv_campaignMedia}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "campaignKeyword"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{cjs_nv_campaignKeyword}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "campaignContent"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{cjs_nv_campaignContent}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "customTask"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{gcid}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableLinkId",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "dimension",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "2"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{previousKeyword}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "3"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{naverBlogPost}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{cjs_nv_campaignRank}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "8"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{gcid}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "index",
+                                        "value": "9"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "dimension",
+                                        "value": "{{cJS - Timestamp}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "true"
+                    }
+                ],
+                "fingerprint": "1621559696438",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "tagId": "42",
+                "name": "Conversion Linker",
+                "type": "gclidw",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableCookieOverrides",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1621558805432",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "tagId": "45",
+                "name": "GA - Event - ecommerce",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useEcommerceDataLayer",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "ecommerce"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{GA ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "true"
+                    }
+                ],
+                "fingerprint": "1621558805433",
+                "firingTriggerId": [
+                    "44"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "tagId": "47",
+                "name": "EVT_scroll 25p",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "validation"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{GA ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "scroll"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventLabel",
+                        "value": "{{Scroll Depth Threshold}}"
+                    }
+                ],
+                "fingerprint": "1621558805433",
+                "firingTriggerId": [
+                    "46"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "tagId": "50",
+                "name": "DL-basket",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nvar productsArr = [];\n    for (i = 0; i < _NB_LO.length; i++) {\n      productsArr.push({\n        'name': _NB_LO[i].PN,\n        'id': _NB_LO[i].PC,\n        'price': _NB_LO[i].PR,\n\t\t'brand': '',\t\t\t\n\t\t'category': '',\t\t\n\t\t'variant': '',\n\t\t'quantity': _NB_LO[i].AM\n\t\t\n\t  })\n    }\nwindow.dataLayer  = window.dataLayer || [];\nwindow.dataLayer.push({\n        'event': 'eec.checkout',\n        'ecommerce': {\n          'checkout': {\n            'actionField': {'step': 1, 'option': ''},\n            'products': productsArr\n      }\n    }\n  });\n  \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1621558805442",
+                "firingTriggerId": [
+                    "49"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "tagId": "52",
+                "name": "AW - Remarketing - All pages",
+                "type": "sp",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableDynamicRemarketing",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "{{AdWords ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "customParamsFormat",
+                        "value": "NONE"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "userId",
+                        "value": "{{gcid}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1621558805435",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "tagId": "56",
+                "name": "AW - Conversion - Thankyou",
+                "type": "awct",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableNewCustomerReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "orderId",
+                        "value": "{{Order ID}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableProductReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionValue",
+                        "value": "{{Order Revenue}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionCookiePrefix",
+                        "value": "_gcl"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "{{AdWords ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "currencyCode",
+                        "value": "{{Currency Code}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionLabel",
+                        "value": "fAZaCJeNp2oQxv7IogM"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1621558805436",
+                "firingTriggerId": [
+                    "54"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "paused": true,
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "tagId": "57",
+                "name": "DL-order",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nwindow.dataLayer = window.dataLayer || [];\nwindow.dataLayer.push({\n\t'event': 'eec.checkout',\t\t\t\t// name of an event. In this case, always stays as eec.checkout\n\t'ecommerce': {\t\t\t\t\t\t\t// ecommerce object. This is the essential part of tracking. New EE data must always be pushed to this object\n\t\t'checkout': {\t\t\t\t\t\t// name of an action. In this case, always stays as checkout\n\t\t\t'actionField': {\t\n\t\t\t\t'step': 2\t\t\t\t\t// number of the current checkout step that a user has entered (must always be 2 in this situation) \n\t\t\t}\n    }\n  }\n});\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1621558805442",
+                "firingTriggerId": [
+                    "40"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "tagId": "58",
+                "name": "DL-AddToCart",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nvar ana_quantity = document.querySelector(\"#totalPrice > span\").innerText.split('(')[1].replace(/\\D/g, '')\nwindow.dataLayer  = window.dataLayer || [];\nwindow.dataLayer.push({\n\t'event': 'eec.addToCart',  \t\t\n\t'ecommerce': {\t\t\t\t\t\n\t\t'currencyCode': 'KOR',\t\t\t\n\t\t'add': {\t\t\t\t\t\t\n\t\t\t'actionField': {\t\t\t\n\t\t\t\t'list': window.location.pathname\n\t\t\t  },\t\t\n\t\t\t'products': [{     \t\t\t\n\t\t\t\t'name': _NB_PD,      \n\t\t\t\t'id': _NB_PC,     \t\n\t\t\t\t'price': _NB_AMT,\t\t\n\t\t\t\t'brand': '',\t\t\n\t\t\t\t'category': '',\t\n\t\t\t\t'variant': '',     \n\t\t\t\t'quantity': parseInt(ana_quantity)\n\t\t\t}]\n\t\t}\n\t}\n});\n\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1621558805443",
+                "firingTriggerId": [
+                    "53",
+                    "23"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "tagId": "60",
+                "name": "DL-Purchase",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nvar productsArr = [];\n    for (i = 0; i < _NB_LO.length; i++) {\n      productsArr.push({\n        'name': _NB_LO[i].PN,\n        'id': _NB_LO[i].PC,\n        'price': _NB_LO[i].PR,\n\t\t'brand': '',\t\t\t\n\t\t'category': _NB_EC_OBJ.order_product[i].category_name_1,\t\t\n\t\t'variant': _NB_LO[i].PN.substring(_NB_LO[i].PN.lastIndexOf('['),_NB_LO[i].PN.length),\n\t\t'quantity': _NB_LO[i].AM\n\t\t\n\t  })\n    }\nwindow.dataLayer  = window.dataLayer || [];\nwindow.dataLayer.push({\n\t'event': 'eec.purchase',\t\t\t\t\n\t'ecommerce': {\t\t\t\t\t\t\t\n\t\t'purchase': {\t\t\t\t\t\t\n\t\t\t'actionField': {\n          'id': _NB_ORD_NO, \n          'affiliation': '',\n          'revenue': _NB_EC_OBJ.payed_amount, \n          'tax': '0.00',\n          'shipping': '0.00',\n          'coupon': ''\n        },\n        'products': productsArr\n      }\n    }\n  });\n  \n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1621558805443",
+                "firingTriggerId": [
+                    "59"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "tagId": "62",
+                "name": "DL-Detail",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nwindow.dataLayer  = window.dataLayer || [];\nwindow.dataLayer.push({\n    'event':'eec.productDetail',\n    'ecommerce': {\n      'detail': {\n        'products': [{\n          'name': _NB_PD,         \n          'id': _NB_PC,\n          'price': _NB_AMT,\n          'brand': '',\n          'category': '',\n          'variant': ''\n        }]\n      }\n    }\n  });\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1621558805443",
+                "firingTriggerId": [
+                    "61"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "13",
+                "name": "eec_pv_home",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "/home/"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621225156240"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "14",
+                "name": "eec_pv_imp",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "/imp/"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621225156241"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "15",
+                "name": "eec_pv_checkout_2",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "/imp/"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621225156241"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "16",
+                "name": "eec_pv_login",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "/user/login.php"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621225156242"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "17",
+                "name": "eec_pv_checkout_1",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "purchase.php?purchaseInfo"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621225156242"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "18",
+                "name": "eec_pv_signup",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "/user/register.php"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621225156243"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "19",
+                "name": "eec_pv_detail_product",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*course\\/\\?courseId\\=.*"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621225486325"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "20",
+                "name": "eec_pv_purchase",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "purchase_complete.php?"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621225156243"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "23",
+                "name": "CLK_addToCart",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "CSS_SELECTOR",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Element}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "div.sp-box > button.sp-act > span"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621558805429"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "39",
+                "name": "DOM ready_All Pages",
+                "type": "DOM_READY",
+                "fingerprint": "1621558805431"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "40",
+                "name": "PV_orderform",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page Path}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "order/orderform.html"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621558805431"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "41",
+                "name": "CE - eec.addToCart",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "eec.addToCart"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621558805431"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "44",
+                "name": "CE - eec",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "^eec\\."
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621558805432"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "46",
+                "name": "SCR_down to 25p",
+                "type": "SCROLL_DEPTH",
+                "fingerprint": "1621558805433",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdUnits",
+                        "value": "PERCENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdsPercent",
+                        "value": "25,50,75,97"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "verticalThresholdOn",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "triggerStartOption",
+                        "value": "WINDOW_LOAD"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "horizontalThresholdOn",
+                        "value": "false"
+                    }
+                ]
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "49",
+                "name": "PV_basket",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page Path}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "/order/basket.html"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621558805434"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "53",
+                "name": "Clk_addToCart_PC",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Classes}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "line cart"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1621558805435"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "54",
+                "name": "PV - Purchase Thank You Page",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "petnature.kr/checkout/order-received/"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621558805436"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "59",
+                "name": "PV_purchase",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "order/order_result.html?order_id"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621558805437"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "triggerId": "61",
+                "name": "PV_detail",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "STARTS_WITH",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page Path}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "/product/"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1621558805437"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "24",
+                "name": "cjs_nv_getParam",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n    var url = {{Page URL}};\n \tvar params = {};\n  \tif (url.length){\n  \t\tvar paramStr = url.split('?');\n  \t\tif (paramStr.length > 1) {\n  \t\t\tparamStr[1].split('&').forEach(function(item) {params[item.split(\"=\")[0]] = item.split(\"=\")[1]});\n    \t}\n  \t}\n\n  \treturn params;\n}"
+                    }
+                ],
+                "fingerprint": "1621558805438",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "25",
+                "name": "cjs_nv_campaignKeyword",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n  var params = {{cjs_nv_getParam}}, cKeyword;\n  if (params.hasOwnProperty(\"n_query\")) cKeyword = decodeURIComponent(params.n_query);\nelse if \n  (params.hasOwnProperty(\"DMKW\")) cKeyword = decodeURIComponent(params.DMKW);\n  return cKeyword;\n}"
+                    }
+                ],
+                "fingerprint": "1621558805438",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "26",
+                "name": "cjs_nv_campaignName",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n  var params = {{cjs_nv_getParam}}, n_ad_group;\n  if (params.hasOwnProperty(\"n_ad_group\")) n_ad_group = params.n_ad_group;\n  return n_ad_group;\n}"
+                    }
+                ],
+                "fingerprint": "1621558805438",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "27",
+                "name": "cjs_nv_campaignContent",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n  var params = {{cjs_nv_getParam}}, n_ad;\n  if (params.hasOwnProperty(\"n_ad\")) n_ad = params.n_ad;\n  return n_ad;\n}"
+                    }
+                ],
+                "fingerprint": "1621558805439",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "28",
+                "name": "cJS - Timestamp",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function formatLocalDate() {\n    var now = new Date(),\n        tzo = -now.getTimezoneOffset(),\n        dif = tzo >= 0 ? '+' : '-',\n        pad = function(num) {\n            var norm = Math.abs(Math.floor(num));\n            return (norm < 10 ? '0' : '') + norm;\n        };\n    return now.getFullYear() \n        + '-' + pad(now.getMonth()+1)\n        + '-' + pad(now.getDate())\n        + 'T' + pad(now.getHours())\n        + ':' + pad(now.getMinutes()) \n        + ':' + pad(now.getSeconds()) \n        + dif + pad(tzo / 60) \n        + ':' + pad(tzo % 60);\n}"
+                    }
+                ],
+                "fingerprint": "1621558805439"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "29",
+                "name": "referrerHost",
+                "type": "f",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "stripWww",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "HOST"
+                    }
+                ],
+                "fingerprint": "1621558805429",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "30",
+                "name": "naverBlogPost",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n    var referrer_hostname = {{referrerHost}};\n\tif (referrer_hostname == \"blog.naver.com\" || referrer_hostname ==\"m.blog.naver.com\"){\n\t\tvar url_string = {{Referrer}};\n\t\tvar url = new URL(url_string);\n      \tvar blogId = url.searchParams.get('blogId');\n\t\tvar logNo = url.searchParams.get('logNo');\n\t\tvar result = blogId + \"/\" + logNo\n\t\treturn result;\n    }\n}"
+                    }
+                ],
+                "fingerprint": "1621558805440",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "31",
+                "name": "GA ID",
+                "type": "gas",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "cookieDomain",
+                        "value": "auto"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "doubleClick",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setTrackerName",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useHashAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decorateFormsAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableLinkId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "UA-187637419-2"
+                    }
+                ],
+                "fingerprint": "1621558805430"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "32",
+                "name": "cjs_nv_campaignSource",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n  var params = {{cjs_nv_getParam}}, cSource;\n  if (params.hasOwnProperty(\"n_campaign_type\")) {\n    switch (params.n_campaign_type){\n      case '1' : \n        cSource = '네이버 파워링크';\n        break;\n      case '2' :\n        cSource = '네이버 쇼핑검색';\n        break;\n      case '4' :\n        cSource = '네이버 브랜드검색';        \n        break;\n    }\n  } else if (params.hasOwnProperty(\"DMCOL\")) {\n    switch (params.DMCOL){\n      case 'PM' : \n        cSource = '다음 PC 검색 포털';\n        break;\n      case 'WIDELINK' :\n        cSource = '다음 PC 검색 와이드링크';\n        break;\n      case 'AM' :\n        cSource = '다음 PC 컨텐츠';        \n        break;\n      case 'MOBILESA' :\n        cSource = '다음 모바일 검색';        \n        break;\n      case 'MOBILEAM' :\n        cSource = '다음 모바일 컨텐츠';        \n        break;\n      case 'MOBILESA' :\n        cSource = '다음 모바일 검색';        \n        break;\n      case 'DDN' :\n        cSource = '다음 디스플레이';        \n        break;\n      case 'ADVANCEDSA' :\n        cSource = '다음 모바일 검색 프리미엄링크';        \n        break;\n    }\n  }\n  return cSource;\n}"
+                    }
+                ],
+                "fingerprint": "1621558805440",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "33",
+                "name": "cjs_nv_campaignRank",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n  var params = {{cjs_nv_getParam}}, cContent, nRank, nKeyword;\n  \n  if (params.hasOwnProperty(\"n_rank\")) nRank = params.n_rank;\n  if (params.hasOwnProperty(\"n_keyword\")) nKeyword = decodeURIComponent(params.n_keyword);\n  if (nRank && nKeyword){\n\tcContent = nRank + '|' + nKeyword;\n  } else if (nRank){\n    cContent = nRank;\n  } else {\n    cContent = nKeyword;\n  }\n  return cContent;\n}"
+                    }
+                ],
+                "fingerprint": "1621558805440",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "34",
+                "name": "cjs_nv_get_naver_media",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n  return {\n\"1\" : \"네이버 블로그\",\n\"5\" : \"네이버 포스트\",\n\"4\" : \"밴드페이지\",\n\"27758\" : \"네이버 통합검색 - PC\",\n\"8753\" : \"네이버 통합검색 - 모바일\",\n\"122876\" : \"네이버 검색탭\",\n\"122875\" : \"네이버 통합검색 광고더보기\",\n\"11068\" : \"네이버 쇼핑 - PC\",\n\"33421\" : \"네이버 쇼핑 - 모바일\",\n\"1525\" : \"네이버 지식iN - PC\",\n\"36010\" : \"네이버 지식iN - 모바일\",\n\"96499\" : \"네이버 카페 - PC\",\n\"96500\" : \"네이버 카페 - 모바일\",\n\"118495\" : \"ZUM - PC\",\n\"118496\" : \"ZUM - 모바일\",\n\"171229\" : \"네이버 뉴스 - 모바일\",\n\"246418\" : \"네이버 메인 - 우리동네\",\n\"171228\" : \"네이버 뿜 - 모바일\",\n\"341898\" : \"네이버 쇼핑 추천 - 모바일\",\n\"168243\" : \"네이버 스포츠뉴스 - 모바일\",\n\"168242\" : \"네이버 연예뉴스 - 모바일\",\n\"171227\" : \"네이버 웹소설 - 모바일\",\n\"341893\" : \"네이버 통합검색 추천-모바일\",\n\"245895\" : \"네이버 트렌드컬렉션\",\n\"103848\" : \"밴드(BAND) - 모바일\",\n\"38367\" : \"11번가 - PC\",\n\"38630\" : \"11번가 - 모바일\",\n\"37853\" : \"2CPU\",\n\"23650\" : \"82cook\",\n\"37420\" : \"AK몰 - PC\",\n\"45140\" : \"AK몰 - 모바일\",\n\"11069\" : \"BB\",\n\"199345\" : \"BB-모바일\",\n\"335739\" : \"Bing-Mobile\",\n\"335738\" : \"Bing-PC\",\n\"1648\" : \"G마켓\",\n\"131017\" : \"G마켓 - 모바일\",\n\"245885\" : \"MLB파크-PC\",\n\"245891\" : \"MLB파크-모바일\",\n\"141122\" : \"SLR클럽\",\n\"66998\" : \"YTN\",\n\"67582\" : \"YTN - 모바일\",\n\"23093\" : \"it조선\",\n\"81750\" : \"가생이닷컴\",\n\"37588\" : \"가자아이\",\n\"15121\" : \"간호잡\",\n\"58824\" : \"건설워커 - PC\",\n\"74321\" : \"건설워커 - 모바일\",\n\"49749\" : \"교차로 - 모바일\",\n\"41354\" : \"교차로잡\",\n\"158989\" : \"교차로잡 - 모바일\",\n\"183423\" : \"굿닥-PC\",\n\"183424\" : \"굿닥-모바일\",\n\"128029\" : \"꼬망세\",\n\"190272\" : \"나무위키-PC\",\n\"190273\" : \"나무위키-모바일\",\n\"298463\" : \"뉴스픽-모바일\",\n\"23123\" : \"다나와 - PC\",\n\"87620\" : \"다나와 - 모바일\",\n\"168666\" : \"다이닝코드 - 모바일\",\n\"14055\" : \"닥터아파트\",\n\"38329\" : \"더어플\",\n\"145966\" : \"동원몰 - PC\",\n\"145967\" : \"동원몰 - 모바일\",\n\"139215\" : \"디시인사이드 - PC\",\n\"131019\" : \"디시인사이드 - 모바일\",\n\"29978\" : \"디올카페\",\n\"67000\" : \"디자이너잡\",\n\"141121\" : \"레포트샵\",\n\"41352\" : \"레포트월드\",\n\"151173\" : \"루리웹 - PC\",\n\"151174\" : \"루리웹 - 모바일\",\n\"51655\" : \"마이민트\",\n\"137282\" : \"마이민트 - 모바일\",\n\"147491\" : \"만개의레시피 - PC\",\n\"26506\" : \"맘스다이어리\",\n\"58827\" : \"메디업 - PC\",\n\"62767\" : \"메디업 - 모바일\",\n\"37126\" : \"메디잡 - PC\",\n\"74320\" : \"메디잡 - 모바일\",\n\"58825\" : \"메디컬잡\",\n\"56345\" : \"미디어잡\",\n\"98128\" : \"번개장터 - 모바일\",\n\"248824\" : \"번개장터-PC\",\n\"15124\" : \"벼룩시장 - PC\",\n\"54186\" : \"벼룩시장 - 모바일\",\n\"282742\" : \"보배드림-모바일\",\n\"84644\" : \"비즈폼\",\n\"27567\" : \"뽐뿌 - PC\",\n\"49745\" : \"뽐뿌 - 모바일\",\n\"69559\" : \"사람인 - 모바일\",\n\"185344\" : \"사람인-PC\",\n\"69555\" : \"샵마넷 - PC\",\n\"69561\" : \"샵마넷 - 모바일\",\n\"69557\" : \"샵오픈\",\n\"156872\" : \"셀잇 - PC\",\n\"156873\" : \"셀잇 - 모바일\",\n\"242241\" : \"속닥-모바일\",\n\"141763\" : \"쇼킹딜 - 모바일\",\n\"62766\" : \"수다닷컴\",\n\"245892\" : \"스포츠동아-PC\",\n\"151175\" : \"씽크존 - PC\",\n\"20545\" : \"아이베이비 - PC\",\n\"49748\" : \"아이베이비 - 모바일\",\n\"24087\" : \"알바몬\",\n\"238734\" : \"알바몬-모바일\",\n\"15119\" : \"알바천국 - PC\",\n\"49746\" : \"알바천국 - 모바일\",\n\"36379\" : \"에누리닷컴 - PC\",\n\"45714\" : \"에누리닷컴 - 모바일\",\n\"137280\" : \"에펨코리아\",\n\"137281\" : \"에펨코리아 - 모바일\",\n\"79387\" : \"여행오키\",\n\"38193\" : \"예스폼\",\n\"70389\" : \"오늘의유머\",\n\"1526\" : \"옥션\",\n\"131018\" : \"옥션 - 모바일\",\n\"131268\" : \"옥션중고장터 - 모바일\",\n\"162341\" : \"와글바글\",\n\"49363\" : \"웃긴대학-모바일\",\n\"179117\" : \"원더쇼핑-모바일\",\n\"149196\" : \"위메프 - 모바일\",\n\"58826\" : \"이엔지잡\",\n\"37131\" : \"이지데이 - PC\",\n\"49747\" : \"이지데이 - 모바일\",\n\"37130\" : \"이패스\",\n\"38197\" : \"인크루트 - PC\",\n\"56346\" : \"인크루트 - 모바일\",\n\"16333\" : \"인터넷교차로\",\n\"35422\" : \"인터파크 - PC\",\n\"89270\" : \"인터파크 - 모바일\",\n\"185345\" : \"인터파크도서-PC\",\n\"185346\" : \"인터파크도서-모바일\",\n\"184185\" : \"인터파크투어-PC\",\n\"184186\" : \"인터파크투어-모바일\",\n\"185341\" : \"인터파크티켓-PC\",\n\"185342\" : \"인터파크티켓-모바일\",\n\"38628\" : \"일간스포츠\",\n\"28552\" : \"잡코리아 - PC\",\n\"51271\" : \"잡코리아 - 모바일\",\n\"197613\" : \"조선닷컴-PC\",\n\"20808\" : \"조아라\",\n\"291244\" : \"중고나라-모바일\",\n\"38627\" : \"중앙일보\",\n\"261145\" : \"중앙일보-모바일\",\n\"15604\" : \"지식로그\",\n\"29987\" : \"채널A\",\n\"291245\" : \"최저가마켓-모바일\",\n\"282741\" : \"캐시피드-모바일\",\n\"20546\" : \"쿠차\",\n\"172112\" : \"쿠차 - 모바일\",\n\"39237\" : \"쿠폰모아\",\n\"190274\" : \"쿠폰모아-모바일\",\n\"19369\" : \"클리앙\",\n\"137283\" : \"클리앙 - 모바일\",\n\"15122\" : \"키드키즈\",\n\"242240\" : \"키즈맘-PC\",\n\"242239\" : \"텐아시아-PC\",\n\"69558\" : \"패션워크\",\n\"24086\" : \"한겨레신문\",\n\"20049\" : \"한경닷컴 - PC\",\n\"51591\" : \"한경닷컴 - 모바일\",\n\"106391\" : \"해피캠퍼스 - PC\",\n\"106392\" : \"해피캠퍼스 - 모바일\",\n\"156874\" : \"해피학술 - PC\",\n\"49362\" : \"호텔모아\",\n\"41353\" : \"훈장마을 - PC\",\n\"69560\" : \"훈장마을 - 모바일\",\n  };\n}"
+                    }
+                ],
+                "fingerprint": "1621558805440",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "35",
+                "name": "cjs_nv_campaignMedia",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n  var params = {{cjs_nv_getParam}}, \n      naver_media = {{cjs_nv_get_naver_media}},\n      cMedium;\n\n  if (params.hasOwnProperty(\"n_media\")) cMedium = naver_media[params.n_media];\n  else if \n    (params.hasOwnProperty(\"DMCOL\")) cMedium = \"cpc\";\n  return cMedium;\n}"
+                    }
+                ],
+                "fingerprint": "1621558805441",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "36",
+                "name": "previousKeyword",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n    var referrer_hostname = {{referrerHost}};\n\tvar ref_url = {{Referrer}};\n\tif (referrer_hostname == \"search.naver.com\" || referrer_hostname ==\"m.search.naver.com\"){\n    \tvar pattern = new RegExp('[\\\\?&]oquery=([^&#]*)');\n\t\tvar query = ref_url.match(pattern);\n\t\tvar keyword = query[1].replace( /\\+/gi, \"%20\");\n\t\tvar result = decodeURI(keyword);\n\t\treturn result;\n    }\n}"
+                    }
+                ],
+                "fingerprint": "1621558805441",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "37",
+                "name": "gcid",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  // Modify customDimensionIndex to match the index number you want to send the data to\n  var customDimensionIndex = 8;\n  return function(model) {\n    model.set('dimension' + customDimensionIndex, model.get('clientId'));\n  }\n}"
+                    }
+                ],
+                "fingerprint": "1621558805442",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "43",
+                "name": "Order ID",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ecommerce.purchase.actionField.id"
+                    }
+                ],
+                "fingerprint": "1621558805432"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "48",
+                "name": "Currency Code",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "KRW"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ecommerce.currencyCode"
+                    }
+                ],
+                "fingerprint": "1621558805434"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "51",
+                "name": "AdWords ID",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "399102096"
+                    }
+                ],
+                "fingerprint": "1621558805434",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "variableId": "55",
+                "name": "Order Revenue",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ecomm_totalvalue"
+                    }
+                ],
+                "fingerprint": "1621558805436",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "CLICK_CLASSES",
+                "name": "Click Classes"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "CLICK_ID",
+                "name": "Click ID"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "CLICK_TARGET",
+                "name": "Click Target"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "CONTAINER_VERSION",
+                "name": "Container Version"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "CONTAINER_ID",
+                "name": "Container ID"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "VIDEO_PROVIDER",
+                "name": "Video Provider"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "VIDEO_URL",
+                "name": "Video URL"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "VIDEO_TITLE",
+                "name": "Video Title"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "VIDEO_DURATION",
+                "name": "Video Duration"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "VIDEO_PERCENT",
+                "name": "Video Percent"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "VIDEO_VISIBLE",
+                "name": "Video Visible"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "VIDEO_STATUS",
+                "name": "Video Status"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "VIDEO_CURRENT_TIME",
+                "name": "Video Current Time"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "SCROLL_DEPTH_THRESHOLD",
+                "name": "Scroll Depth Threshold"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "SCROLL_DEPTH_UNITS",
+                "name": "Scroll Depth Units"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "SCROLL_DEPTH_DIRECTION",
+                "name": "Scroll Direction"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "ELEMENT_VISIBILITY_RATIO",
+                "name": "Percent Visible"
+            },
+            {
+                "accountId": "4702624129",
+                "containerId": "45177636",
+                "type": "ELEMENT_VISIBILITY_TIME",
+                "name": "On-Screen Duration"
+            }
+        ],
+        "fingerprint": "1621564122715",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/4702624129/containers/45177636/versions/0?apiLink=version"
+    }
+}
